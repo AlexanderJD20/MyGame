@@ -87,6 +87,10 @@ public class SpriteGameObject : GameObject
         {
             return true;
         }
+        if (this == obj)
+        {
+            return false;
+        }
         Rectangle b = Collision.Intersection(BoundingBox, obj.BoundingBox);
         for (int x = 0; x < b.Width; x++)
         {
