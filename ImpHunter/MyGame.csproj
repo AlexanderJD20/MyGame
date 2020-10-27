@@ -61,6 +61,7 @@
     <Compile Include="GameObjects\Ball.cs" />
     <Compile Include="GameObjects\GoalKeeper.cs" />
     <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameStates\GameOverState.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="Program.cs" />

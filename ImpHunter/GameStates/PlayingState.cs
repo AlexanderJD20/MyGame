@@ -13,6 +13,8 @@ namespace ImpHunter.GameStates {
         Ball theBall;
         GoalKeeper goalKeeper;
         Boolean ballFired;
+        Boolean gameOver;
+        int lives = 3;
 
         public PlayingState() {
             this.Add(new SpriteGameObject("spr_background"));
@@ -22,6 +24,7 @@ namespace ImpHunter.GameStates {
 
             goalKeeper = new GoalKeeper();
             this.Add(goalKeeper);
+            
         }
         
         public override void HandleInput(InputHelper inputHelper) {
@@ -38,6 +41,21 @@ namespace ImpHunter.GameStates {
             if (ballFired && theBall.Position.Y <50) {
                 theBall.Visible = false;
                 ballFired = false;
+            }
+            if(theBall != null) {
+                if (theBall.CollidesWith(goalKeeper)) {
+                    theBall.Visible = false;
+                    ballFired = false;
+                    lives--;
+                }
+            }
+            if(lives <= 0) {
+                gameOver = true;
+            }
+            if (gameOver) {
+                GameEnvironment.GameStateManager.SwitchTo("GameOverState");
+                lives = 3;
+                gameOver = false;
             }
         }
     }
