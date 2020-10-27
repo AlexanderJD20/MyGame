@@ -22,7 +22,7 @@ namespace MyGame
         protected override void LoadContent()
         {
             base.LoadContent();
-            Screen = new Point(520, 780);
+            Screen = new Point(800, 950);
             ApplyResolutionSettings();
 
             // TODO: use this.Content to load your game content here
