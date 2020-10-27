@@ -8,10 +8,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace ImpHunter.GameObjects {
     class Player : SpriteGameObject {
-        public Player() : base("spr_speler"){
-            position.X = GameEnvironment.Screen.X/2;
-            position.Y = GameEnvironment.Screen.Y/2;
+        public Player() : base("spr_player"){
             origin = Center;
+            Reset();
         }
         public override void HandleInput(InputHelper inputHelper) {
             base.HandleInput(inputHelper);
@@ -42,6 +41,11 @@ namespace ImpHunter.GameObjects {
             if(position.Y > 800) {
                 position.Y = 800;
             }
+        }
+        public override void Reset() {
+            base.Reset();
+            position.X = GameEnvironment.Screen.X / 2;
+            position.Y = GameEnvironment.Screen.Y / 2;
         }
 
     }

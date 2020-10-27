@@ -22,7 +22,6 @@ namespace ImpHunter.GameObjects {
             if (position.X < 320) {
                 velocity.X = -velocity.X;
             }
-            
         }
 
     }
