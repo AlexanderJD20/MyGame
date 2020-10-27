@@ -11,6 +11,7 @@ namespace ImpHunter.GameStates {
     class PlayingState : GameObjectList {
         Player thePlayer;
         Ball theBall;
+        GoalKeeper goalKeeper;
         Boolean ballFired;
 
         public PlayingState() {
@@ -19,7 +20,8 @@ namespace ImpHunter.GameStates {
             thePlayer = new Player();
             this.Add(thePlayer);
 
-            
+            goalKeeper = new GoalKeeper();
+            this.Add(goalKeeper);
         }
         
         public override void HandleInput(InputHelper inputHelper) {
