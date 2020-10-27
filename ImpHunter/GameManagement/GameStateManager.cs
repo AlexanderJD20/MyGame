@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using ImpHunter.GameStates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -34,6 +36,7 @@ public class GameStateManager : IGameLoopObject
             throw new KeyNotFoundException("Could not find game state: " + name);
         }
     }
+
 
     public IGameLoopObject CurrentGameState
     {

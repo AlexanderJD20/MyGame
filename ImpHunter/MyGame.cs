@@ -1,15 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ImpHunter.GameStates;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace ImpHunter
+namespace MyGame
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class ImpHunter : GameEnvironment
+    public class MyGame : GameEnvironment
     {
-        public ImpHunter()
+        public MyGame()
         {
             Content.RootDirectory = "Content";
         }
@@ -21,11 +22,13 @@ namespace ImpHunter
         protected override void LoadContent()
         {
             base.LoadContent();
-            Screen = new Point(800, 600);
+            Screen = new Point(520, 780);
             ApplyResolutionSettings();
 
             // TODO: use this.Content to load your game content here
-
+            GameStateManager.AddGameState("PlayingState", new PlayingState());
+            GameStateManager.SwitchTo("PlayingState");
+            
         }
         
     }
