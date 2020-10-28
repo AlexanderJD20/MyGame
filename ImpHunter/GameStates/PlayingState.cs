@@ -69,13 +69,19 @@ namespace ImpHunter.GameStates {
             score.Text = goals.ToString();
             //detect if ball got in goal
             if (ballFired && theBall.Position.Y <50 && theBall.Position.X > 320 && theBall.Position.X < 500) {
-                crowd.Add(new Crowd(new Vector2(25, 25 + (50*goals))));
+                if(goals >= 19) {
+                    crowd.Add(new Crowd(new Vector2(75, 25 + (50 * (goals-19)))));
+                }
+                if(goals < 19) {
+                    crowd.Add(new Crowd(new Vector2(25, 25 + (50 * goals))));
+                }
+                //crowd.Add(new Crowd(new Vector2(25, 25 + (50*goals))));
                 theBall.Visible = false;
                 ballFired = false;
                 goals++;
             }
             foreach(Crowd crowd in crowd.Children) {
-
+                
             }
             //look if ball missed
             if (ballFired && theBall.Position.Y < 0) {
