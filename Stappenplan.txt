@@ -1,0 +1,15 @@
+Eerst heb ik nagedacht over wat voor game ik wilde maken. Toen besloot ik om een voetbal game te maken waar je schiet in een goal met een keeper die het probeert tegen te houden en jij probeert zoveel mogelijk te scoren. 
+Dit was het idee waar ik verder mee ben gegaan.
+Eerst heb ik een goede background opgezocht dit duurde wel even want was niet blij met de eerste die ik had vooral ook omdat de afmetingen van de sprite heel raar waren. Vervolgens
+Heb ik de background weer veranderd en een speler toegevoegd. Eerst wilde ik de speler laten moven met de muis.
+Uiteindelijk kwam ik er achter dat er problemen waren met het afschieten van de bal als ik muis gebruiktte ook vond ik dat de movement wat statischer mocht, de muis gaf teveel vrijheid.
+Hierna heb ik de bal en collision van de bal gecodedeerd dat de bal opnieuw afgeschoten mag worden als de bal buiten het veld is of in het goal is geland.
+Vervolgens heb ik de goalkeeper erin gezet ik wist al dat ik de keeper heen en weer wilde laten bewegen dus dat was easy om te doen, toen de basis van de keeper klaar was heb ik de collision tussen de bal en de keeper gedaan.
+Dit was eerst moeilijk omdat ik niet besefte dat de bal eerst null is omdat ie op het begin niet bestaan als de game begint uiteindelijk kwam ik hier wel achter door een 1 conditie erbij te doen werkte de collision gelijk.
+Toen heb ik besloten dat de movement van de speler teveel vrijheid en het statischer moest worden om het meer die arcade/retro vibe te geven en om mijn probleem op te lossen met de ball die ver voor de speler spawnt.
+Heb een game over state toegevoeg, een lose condition en lives.
+Vervolgens heb ik eraan gewerkt om tekst van de score en het aantal levens in kaart te brengen.
+Ik had al als idee als je 3 keer hebt gemist is het game over en de bedoeling van de game is dat je zoveel mogelijk doelpunten haalt als je kan. Dit diende als mijn lose condition.
+Daarna om de gameobjectlist te gebruiken en de game nog wat extra's te geven heb ik toegevoegd dat er elke keer als je scoort er iemand extra in het publiek komt.
+Ook heb ik de sprite van de speler aangepast omdat ik vond dat de keeper en speler teveel op elkaar leken waardoor makkelijker verwaring kan komen bij mensen die de game spelen.
+

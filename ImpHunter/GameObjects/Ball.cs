@@ -12,9 +12,5 @@ namespace ImpHunter.GameObjects {
             velocity.Y = -200;
             origin = Center;
         }
-        public override void Update(GameTime gameTime) {
-            base.Update(gameTime);
-            
-        }
     }
 }

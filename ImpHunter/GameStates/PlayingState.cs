@@ -57,6 +57,7 @@ namespace ImpHunter.GameStates {
 
         public override void HandleInput(InputHelper inputHelper) {
             base.HandleInput(inputHelper);
+            //press space to shoot
             if (inputHelper.KeyPressed(Keys.Space) && !ballFired) {
                 theBall = new Ball(thePlayer.Position);
                 this.Add(theBall);
@@ -75,13 +76,9 @@ namespace ImpHunter.GameStates {
                 if(goals < 19) {
                     crowd.Add(new Crowd(new Vector2(25, 25 + (50 * goals))));
                 }
-                //crowd.Add(new Crowd(new Vector2(25, 25 + (50*goals))));
                 theBall.Visible = false;
                 ballFired = false;
                 goals++;
-            }
-            foreach(Crowd crowd in crowd.Children) {
-                
             }
             //look if ball missed
             if (ballFired && theBall.Position.Y < 0) {
